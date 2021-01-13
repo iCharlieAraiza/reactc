@@ -6,6 +6,6 @@ Current config is working no
 
 Added a SSH connection
 
---Current config is working no
+- Current config is working no
 
---Added a SSH connection chec
+- Added a SSH connection chec
