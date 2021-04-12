@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-const AddCategory = (props)=>{
+const AddCategory = ( {setCategories} )=>{
     
     const [inputValue, setInputValue] = useState('Hola mundo');
     
@@ -11,7 +11,7 @@ const AddCategory = (props)=>{
     const handleSubmit = (e)=>{
         e.preventDefault();
         //props.handleAdd(inputValue);
-        props.setCategories( categories => [...categories, inputValue] );
+        setCategories( categories => [...categories, inputValue] );
         console.log('Has dado un submit!');
     }
 
