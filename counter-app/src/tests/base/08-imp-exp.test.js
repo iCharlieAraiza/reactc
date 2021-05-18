@@ -18,4 +18,9 @@ describe('data test', ()=>{
         expect( undefined ).toBe( heroById );
     });
 
+    test('Get hero by owner', ()=>{ 
+        const hero = heroes.heroes.find( (h) => h.owner === 'DC' );
+        expect( {id:1, name: 'Batman', owner: 'DC'} ).toEqual( hero );
+    });
+
 });
