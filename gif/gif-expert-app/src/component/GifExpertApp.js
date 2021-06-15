@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import AddCategory from './AddCategory';
+import GifGrid from './GifGrid';
+
+let id = 0;
+
 
 const GifExpertApp  = () =>{
 
     //const categories = ['One Punch', 'Samurai X', 'Dragon Bal'];
-    const [categories, setCategories] = useState( ['One Punch', 'Samurai X', 'Dragon Bal']);
+    const [categories, setCategories] = useState( ['One Punch']);
 
     const handleAdd = (value)=>{
         console.log('Has agregado un nuevo componente');
@@ -19,7 +23,7 @@ const GifExpertApp  = () =>{
             <button onClick={ handleAdd }>Agregar</button>
             <ol>
                 {categories.map( category =>{
-                    return <li key={category}>{ category }</li>
+                    return <GifGrid key={id++} category={category}/>
                 })}
             </ol>
         </>
