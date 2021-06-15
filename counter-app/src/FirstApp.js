@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FirstApp = ({greeting, name})=>{
+const FirstApp = ({greeting, name, mockHandler})=>{
     
     const numbers = [1,2,3,4,5,6,7];
  
@@ -9,6 +9,11 @@ const FirstApp = ({greeting, name})=>{
         name: "Carlos",
         lastName: "Surname",
         age: 27
+    }
+
+    const clickHandle = ()=>{
+        console.log("hola");
+        mockHandler();
     }
 
     return(
@@ -23,6 +28,8 @@ const FirstApp = ({greeting, name})=>{
                 <p>Apellido: { user.lastName }</p>
                 <p>Edad: { user.age } </p>
             </pre>
+            <button onClick={clickHandle}>prueba de click</button>
+
         </>
         )
 }
